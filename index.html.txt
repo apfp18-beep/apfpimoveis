@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Paula Ferreira Imóveis | CRECI 279800 | Indaiatuba e São Paulo</title>
+    <style>
+        /* Reset e estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #A67C52;
+            --secondary: #D4B896;
+            --accent: #8B6B4D;
+            --light: #F8F4F0;
+            --light-beige: #F1E9E0;
+            --medium-beige: #E5D5C3;
+            --dark: #5D4037;
+            --text: #4E342E;
+            --text-light: #8D6E63;
+            --white: #FFFFFF;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header e Navegação */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: var(--light-beige);
+            border-bottom: 1px solid var(--medium-beige);
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-top-contact {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .header-top-contact span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-light);
+        }
+        
+        .creci-badge {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+        
+        .logo-symbol {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(166, 124, 82, 0.3);
+        }
+        
+        .logo-key {
+            color: var(--white);
+            font-size: 28px;
+            transform: rotate(-45deg);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo-decoration {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            top: -5px;
+            left: -5px;
+            animation: rotate 20s linear infinite;
+        }
+        
+        .logo-decoration::before,
+        .logo-decoration::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+        
+        .logo-decoration::before {
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .logo-decoration::after {
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(248, 244, 240, 0.9), rgba(248, 244, 240, 0.9)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            color: var(--dark);
+            margin-top: 120px;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text);
+            max-width: 600px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(166, 124, 82, 0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            margin-left: 10px;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .btn-add-property {
+            background-color: var(--accent);
+            margin-left: 10px;
+        }
+        
+        .btn-add-property:hover {
+            background-color: #7A5A3F;
+        }
+        
+        /* Seção de Destaques */
+        .section-title {
+            text-align: center;
+            margin: 80px 0 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            display: inline-block;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+        
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .property-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: var(--white);
+            border: 1px solid var(--medium-beige);
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        .property-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .property-img {
+            height: 220px;
+            background-color: var(--light-beige);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .property-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .property-card:hover .property-img img {
+            transform: scale(1.05);
+        }
+        
+        .property-info {
+            padding: 20px;
+        }
+        
+        .property-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .property-address {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .property-features {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .property-features span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .property-description {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Seção Serviços */
+        .services {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid var(--medium-beige);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-beige);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Seção Sobre */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .about-features {
+            margin: 25px 0;
+        }
+        
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .about-feature i {
+            color: var(--primary);
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        /* Seção Áreas de Atuação */
+        .areas {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .area-card {
+            background: var(--light-beige);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--medium-beige);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .area-card:hover {
+            background: var(--white);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        .area-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .area-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .city-whatsapp-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .city-whatsapp-btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        /* Seção Contato */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item i {
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+            margin-top: 3px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid var(--medium-beige);
+            border-radius: 6px;
+            font-size: 1rem;
+            background: var(--white);
+            transition: border-color 0.3s;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #D7CCC8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #BCAAA4;
+            font-size: 0.9rem;
+        }
+        
+        /* Filtros */
+        .filters {
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border: 1px solid var(--medium-beige);
+        }
+        
+        .filter-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .filter-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        .filter-group select, .filter-group input {
+            padding: 10px;
+            border: 1px solid var(--medium-beige);
+            border-radius: 6px;
+            background: var(--white);
+        }
+        
+        /* Botões de Cidade no Hero */
+        .city-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .city-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--light-beige);
+            color: var(--primary);
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid var(--medium-beige);
+        }
+        
+        .city-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        /* CRM Section */
+        .crm-section {
+            background-color: var(--white);
+            padding: 80px 0;
+            border-top: 1px solid var(--medium-beige);
+        }
+        
+        .crm-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light-beige);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .crm-form {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid var(--medium-beige);
+            border-radius: 6px;
+            font-size: 1rem;
+            background: var(--white);
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: 8px 0 0 8px;
+            z-index: 1000;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+        }
+        
+        .admin-panel h3 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .admin-btn {
+            display: block;
+            width: 100%;
+            background: var(--white);
+            color: var(--primary);
+            border: none;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .admin-btn:hover {
+            background: var(--light-beige);
+        }
+        
+        /* Quick Contact */
+        .quick-contact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .whatsapp-float {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            .logo-container {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hero {
+                margin-top: 180px;
+                text-align: center;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .btn-outline, .btn-whatsapp, .btn-add-property {
+                margin-left: 0;
+                margin-top: 10px;
+                display: inline-block;
+            }
+            
+            .city-buttons {
+                justify-content: center;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+            }
+            
+            .header-top .container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                gap: 0;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .logo-key {
+                font-size: 24px;
+            }
+            
+            .logo-decoration {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .city-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .city-btn {
+                width: 200px;
+                justify-content: center;
+            }
+            
+            .admin-panel {
+                display: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-contact">
+                    <span><i class="fas fa-phone"></i> (12) 99618-9098</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Indaiatuba e São Paulo</span>
+                    <span class="creci-badge">CRECI 279800</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.me/5512996189098"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/anaapfp" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:apfp.18@outlook.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-symbol">
+                        <div class="logo-key">🗝️</div>
+                    </div>
+                    <div class="logo-decoration"></div>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Ana Paula Ferreira Imóveis</div>
+                    <div class="logo-subtitle">CRECI 279800 | Oportunidades únicas selecionadas</div>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#properties"><i class="fas fa-building"></i> Imóveis</a></li>
+                    <li><a href="#services"><i class="fas fa-handshake"></i> Serviços</a></li>
+                    <li><a href="#crm"><i class="fas fa-users"></i> CRM</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> Sobre</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Painel Administrativo -->
+    <div class="admin-panel">
+        <h3>Painel Admin</h3>
+        <button class="admin-btn" onclick="openAddPropertyModal()">
+            <i class="fas fa-plus"></i> Adicionar Imóvel
+        </button>
+        <button class="admin-btn" onclick="openCRM()">
+            <i class="fas fa-users"></i> Ver Leads
+        </button>
+        <button class="admin-btn" onclick="openPropertyManager()">
+            <i class="fas fa-home"></i> Gerenciar Imóveis
+        </button>
+    </div>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <div class="quick-contact">
+        <a href="https://wa.me/5512996189098" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            Fale Comigo
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Encontre oportunidades únicas selecionadas</h1>
+                <p>Especialista em Indaiatuba e São Paulo. Trabalho com seleção criteriosa e parcerias estratégicas para investidores e quem busca moradia.</p>
+                <a href="#properties" class="btn">Ver Oportunidades</a>
+                <a href="#contact" class="btn btn-outline">Tenho um imóvel para vender</a>
+                <button class="btn btn-add-property" onclick="openAddPropertyModal()">
+                    <i class="fas fa-plus"></i> Adicionar Imóvel
+                </button>
+                
+                <div class="city-buttons">
+                    <a href="https://wa.me/5512996189098?text=Olá Ana Paula! Gostaria de saber mais sobre oportunidades em Indaiatuba" class="city-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Indaiatuba
+                    </a>
+                    <a href="https://wa.me/5512996189098?text=Olá Ana Paula! Gostaria de saber mais sobre oportunidades em São Paulo" class="city-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        São Paulo
+                    </a>
+                    <a href="https://wa.me/5512996189098?text=Olá Ana Paula! Gostaria de conversar sobre uma parceria" class="city-btn">
+                        <i class="fas fa-handshake"></i>
+                        Parcerias
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Adicionar Imóvel -->
+    <div id="addPropertyModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 30px; border-radius: 10px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto;">
+            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 20px;">
+                <h2 style="color: var(--primary);">Adicionar Novo Imóvel</h2>
+                <button onclick="closeAddPropertyModal()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light);">&times;</button>
+            </div>
+            
+            <form id="propertyForm" class="crm-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="propertyTitle">Título do Imóvel *</label>
+                        <input type="text" id="propertyTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyPrice">Preço (R$) *</label>
+                        <input type="number" id="propertyPrice" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="propertyType">Tipo *</label>
+                        <select id="propertyType" required>
+                            <option value="">Selecione</option>
+                            <option value="apartment">Apartamento</option>
+                            <option value="house">Casa</option>
+                            <option value="commercial">Comercial</option>
+                            <option value="land">Terreno</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyCity">Cidade *</label>
+                        <select id="propertyCity" required>
+                            <option value="">Selecione</option>
+                            <option value="indaiatuba">Indaiatuba</option>
+                            <option value="sao-paulo">São Paulo</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="propertyBedrooms">Quartos</label>
+                        <input type="number" id="propertyBedrooms" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyBathrooms">Banheiros</label>
+                        <input type="number" id="propertyBathrooms" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyParking">Vagas</label>
+                        <input type="number" id="propertyParking" min="0">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="propertyAddress">Endereço *</label>
+                    <input type="text" id="propertyAddress" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="propertyDescription">Descrição *</label>
+                    <textarea id="propertyDescription" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="propertyImage">URL da Imagem</label>
+                    <input type="url" id="propertyImage" placeholder="https://exemplo.com/imagem.jpg">
+                </div>
+                
+                <div class="form-group">
+                    <label for="propertyBadge">Badge</label>
+                    <select id="propertyBadge">
+                        <option value="">Nenhum</option>
+                        <option value="Investimento">Investimento</option>
+                        <option value="Moradia">Moradia</option>
+                        <option value="Exclusivo">Exclusivo</option>
+                        <option value="Destaque">Destaque</option>
+                        <option value="Lançamento">Lançamento</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-save"></i> Salvar Imóvel
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Seção de Destaques -->
+    <section class="properties" id="properties">
+        <div class="container">
+            <div class="section-title">
+                <h2>Oportunidades Selecionadas</h2>
+            </div>
+            <div class="section-subtitle">
+                <p>Imóveis cuidadosamente selecionados para investidores e para quem busca o lar perfeito</p>
+            </div>
+            <div class="properties-grid" id="propertiesContainer">
+                <!-- Os imóveis serão carregados dinamicamente aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como Posso Ajudar Você</h2>
+            </div>
+            <div class="section-subtitle">
+                <p>Serviços especializados para atender suas necessidades imobiliárias</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Busca Personalizada</h3>
+                    <p>Encontro o imóvel ideal baseado no seu perfil, necessidades e objetivos de investimento.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Assessoria para Investidores</h3>
+                    <p>Identifico as melhores oportunidades com análise de retorno e potencial de valorização.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Venda do Seu Imóvel</h3>
+                    <p>Estratégia personalizada para vender seu imóvel pelo melhor preço no mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Áreas de Atuação -->
+    <section class="areas" id="areas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Onde Atuo</h2>
+            </div>
+            <div class="section-subtitle">
+                <p>Atendimento especializado nas regiões com maior potencial do mercado</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <h3>Indaiatuba</h3>
+                    <p>Minha cidade, onde conheço cada bairro e suas particularidades. Foco em imóveis com excelente custo-benefício e potencial de valorização.</p>
+                    <a href="https://wa.me/5512996189098?text=Olá Ana Paula! Gostaria de saber mais sobre oportunidades em Indaiatuba" class="city-whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Indaiatuba
+                    </a>
+                </div>
+                <div class="area-card">
+                    <h3>São Paulo</h3>
+                    <p>Atuo na capital paulista com foco em oportunidades estratégicas para investimento e moradia em localizações privilegiadas.</p>
+                    <a href="https://wa.me/5512996189098?text=Olá Ana Paula! Gostaria de saber mais sobre oportunidades em São Paulo" class="city-whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> São Paulo
+                    </a>
+                </div>
+                <div class="area-card">
+                    <h3>Parcerias Estratégicas</h3>
+                    <p>Trabalho com incorporadoras e proprietários selecionados, garantindo oportunidades exclusivas e diferenciadas no mercado.</p>
+                    <a href="https://wa.me/5512996189098?text=Olá Ana Paula! Gostaria de conversar sobre uma possível parceria" class="city-whatsapp-btn">
+                        <i class="fas fa-handshake"></i> Parcerias
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CRM -->
+    <section class="crm-section" id="crm">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vamos Conectar?</h2>
+            </div>
+            <div class="section-subtitle">
+                <p>Cadastre-se para receber as melhores oportunidades do mercado em primeira mão</p>
+            </div>
+            <div class="crm-container">
+                <form id="crmForm" class="crm-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clientName">Nome Completo *</label>
+                            <input type="text" id="clientName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientEmail">E-mail *</label>
+                            <input type="email" id="clientEmail" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clientPhone">Telefone *</label>
+                            <input type="tel" id="clientPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientCity">Cidade de Interesse *</label>
+                            <select id="clientCity" required>
+                                <option value="">Selecione</option>
+                                <option value="indaiatuba">Indaiatuba</option>
+                                <option value="sao-paulo">São Paulo</option>
+                                <option value="ambas">Ambas</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clientInterest">Interesse Principal *</label>
+                            <select id="clientInterest" required>
+                                <option value="">Selecione</option>
+                                <option value="investment">Investimento</option>
+                                <option value="residence">Moradia</option>
+                                <option value="both">Ambos</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientBudget">Faixa de Orçamento *</label>
+                            <select id="clientBudget" required>
+                                <option value="">Selecione</option>
+                                <option value="300000">Até R$ 300.000</option>
+                                <option value="500000">R$ 300.000 - R$ 500.000</option>
+                                <option value="700000">R$ 500.000 - R$ 700.000</option>
+                                <option value="1000000">R$ 700.000 - R$ 1.000.000</option>
+                                <option value="1500000">Acima de R$ 1.000.000</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="clientMessage">Mensagem ou Observações</label>
+                        <textarea id="clientMessage" placeholder="Conte-me mais sobre o que você está buscando..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Quero Oportunidades Exclusivas
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Ana Paula Ferreira</h2>
+                    <p>Moro em Indaiatuba e atuo como corretora de imóveis com foco em oportunidades únicas selecionadas. Meu trabalho é baseado na busca criteriosa por imóveis que ofereçam real valor tanto para investidores quanto para quem busca moradia.</p>
+                    <p>Trabalho através de parcerias estratégicas, sempre priorizando a qualidade e o potencial de cada propriedade. Cada imóvel que apresento passa por uma análise cuidadosa para garantir que atenda às expectativas de valorização e qualidade.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Seleção criteriosa de imóveis em Indaiatuba e São Paulo</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Foco em oportunidades para investidores e moradia</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trabalho baseado em parcerias estratégicas</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atendimento personalizado e transparente</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn">Entre em Contato</a>
+                    <a href="https://wa.me/5512996189098" class="btn btn-whatsapp" style="margin-left: 10px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ana Paula Ferreira - Corretora">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vamos Conversar</h2>
+            </div>
+            <div class="section-subtitle">
+                <p>Estou à disposição para apresentar oportunidades ou conversar sobre parcerias</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Meus Contatos</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i>
+                            <span>Ana Paula Ferreira</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(12) 99618-9098</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>apfp.18@outlook.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Indaiatuba e São Paulo</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-id-card"></i>
+                            <span>CRECI 279800</span>
+                        </div>
+                    </div>
+                    <h3>Minhas Redes</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/5512996189098"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/anaapfp" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:apfp.18@outlook.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Seu nome completo" required>
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <input type="tel" placeholder="Seu telefone com DDD">
+                        <select required>
+                            <option value="">Qual é o seu interesse?</option>
+                            <option value="invest">Busco oportunidades de investimento</option>
+                            <option value="live">Quero encontrar meu lar ideal</option>
+                            <option value="sell">Tenho um imóvel para vender</option>
+                            <option value="partnership">Gostaria de uma parceria</option>
+                            <option value="info">Gostaria de mais informações</option>
+                        </select>
+                        <textarea placeholder="Conte-me sobre sua busca..." required></textarea>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ana Paula Ferreira Imóveis</h3>
+                    <p>Oportunidades únicas selecionadas para investidores e quem busca o lar perfeito em Indaiatuba e São Paulo.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#properties">Oportunidades</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#crm">Cadastro</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#services">Busca Personalizada</a></li>
+                        <li><a href="#services">Assessoria para Investidores</a></li>
+                        <li><a href="#services">Venda do Seu Imóvel</a></li>
+                        <li><a href="#contact">Parcerias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (12) 99618-9098</li>
+                        <li><i class="fas fa-envelope"></i> apfp.18@outlook.com</li>
+                        <li><i class="fab fa-instagram"></i> @anaapfp</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Indaiatuba e São Paulo</li>
+                        <li><i class="fas fa-id-card"></i> CRECI 279800</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ana Paula Ferreira Imóveis. Todos os direitos reservados. CRECI 279800</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de CRM e Gerenciamento de Imóveis
+        let properties = JSON.parse(localStorage.getItem('properties')) || [
+            {
+                id: 1,
+                title: "Apartamento em Condomínio Fechado",
+                price: "750.000",
+                type: "apartment",
+                city: "sao-paulo",
+                bedrooms: 3,
+                bathrooms: 2,
+                parking: 2,
+                address: "Jardim Paulistano, São Paulo",
+                description: "Apartamento em condomínio com excelente localização, alto potencial de valorização e ótimo para investimento.",
+                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                badge: "Investimento"
+            },
+            {
+                id: 2,
+                title: "Casa com Piscina e Área Gourmet",
+                price: "950.000",
+                type: "house",
+                city: "indaiatuba",
+                bedrooms: 4,
+                bathrooms: 3,
+                parking: 3,
+                address: "Jardim Morada do Sol, Indaiatuba",
+                description: "Casa em condomínio fechado com piscina, área gourmet e amplo jardim. Perfeita para famílias.",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                badge: "Moradia"
+            },
+            {
+                id: 3,
+                title: "Cobertura Duplex com Vista Panorâmica",
+                price: "1.200.000",
+                type: "apartment",
+                city: "sao-paulo",
+                bedrooms: 3,
+                bathrooms: 3,
+                parking: 2,
+                address: "Moema, São Paulo",
+                description: "Cobertura duplex com terraço e vista panorâmica. Oportunidade única em localização privilegiada.",
+                image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                badge: "Exclusivo"
+            }
+        ];
+
+        let leads = JSON.parse(localStorage.getItem('leads')) || [];
+
+        // Funções do Modal de Imóveis
+        function openAddPropertyModal() {
+            document.getElementById('addPropertyModal').style.display = 'flex';
+        }
+
+        function closeAddPropertyModal() {
+            document.getElementById('addPropertyModal').style.display = 'none';
+            document.getElementById('propertyForm').reset();
+        }
+
+        // Carregar propriedades na página
+        function loadProperties() {
+            const container = document.getElementById('propertiesContainer');
+            container.innerHTML = '';
+            
+            properties.forEach(property => {
+                const propertyCard = document.createElement('div');
+                propertyCard.className = 'property-card';
+                propertyCard.innerHTML = `
+                    <div class="property-img">
+                        ${property.badge ? `<div class="property-badge">${property.badge}</div>` : ''}
+                        <img src="${property.image}" alt="${property.title}" onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">R$ ${property.price}</div>
+                        <div class="property-address">${property.address}</div>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> ${property.bedrooms} quartos</span>
+                            <span><i class="fas fa-bath"></i> ${property.bathrooms} banheiros</span>
+                            <span><i class="fas fa-car"></i> ${property.parking} vagas</span>
+                        </div>
+                        <p class="property-description">${property.description}</p>
+                        <a href="https://wa.me/5512996189098?text=Olá! Tenho interesse no imóvel: ${encodeURIComponent(property.title)} - R$ ${property.price}" class="btn" style="margin-top: 10px; display: inline-block; width: 100%; text-align: center;">
+                            Tenho Interesse
+                        </a>
+                        <button onclick="deleteProperty(${property.id})" class="btn btn-outline" style="margin-top: 5px; display: inline-block; width: 100%; text-align: center; background: #e74c3c; border-color: #e74c3c; color: white;">
+                            <i class="fas fa-trash"></i> Remover
+                        </button>
+                    </div>
+                `;
+                container.appendChild(propertyCard);
+            });
+        }
+
+        // Adicionar nova propriedade
+        document.getElementById('propertyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const newProperty = {
+                id: Date.now(),
+                title: document.getElementById('propertyTitle').value,
+                price: document.getElementById('propertyPrice').value,
+                type: document.getElementById('propertyType').value,
+                city: document.getElementById('propertyCity').value,
+                bedrooms: parseInt(document.getElementById('propertyBedrooms').value) || 0,
+                bathrooms: parseInt(document.getElementById('propertyBathrooms').value) || 0,
+                parking: parseInt(document.getElementById('propertyParking').value) || 0,
+                address: document.getElementById('propertyAddress').value,
+                description: document.getElementById('propertyDescription').value,
+                image: document.getElementById('propertyImage').value || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                badge: document.getElementById('propertyBadge').value
+            };
+            
+            properties.push(newProperty);
+            localStorage.setItem('properties', JSON.stringify(properties));
+            loadProperties();
+            closeAddPropertyModal();
+            alert('Imóvel adicionado com sucesso!');
+        });
+
+        // Deletar propriedade
+        function deleteProperty(id) {
+            if (confirm('Tem certeza que deseja remover este imóvel?')) {
+                properties = properties.filter(property => property.id !== id);
+                localStorage.setItem('properties', JSON.stringify(properties));
+                loadProperties();
+            }
+        }
+
+        // Sistema de CRM
+        document.getElementById('crmForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const newLead = {
+                id: Date.now(),
+                name: document.getElementById('clientName').value,
+                email: document.getElementById('clientEmail').value,
+                phone: document.getElementById('clientPhone').value,
+                city: document.getElementById('clientCity').value,
+                interest: document.getElementById('clientInterest').value,
+                budget: document.getElementById('clientBudget').value,
+                message: document.getElementById('clientMessage').value,
+                date: new Date().toLocaleDateString('pt-BR'),
+                status: 'novo'
+            };
+            
+            leads.push(newLead);
+            localStorage.setItem('leads', JSON.stringify(leads));
+            
+            // Enviar para WhatsApp
+            const whatsappMessage = `Novo lead cadastrado:%0A%0ANome: ${newLead.name}%0AEmail: ${newLead.email}%0ATelefone: ${newLead.phone}%0ACidade: ${newLead.city}%0AInteresse: ${newLead.interest}%0AOrçamento: ${newLead.budget}%0AMensagem: ${newLead.message}`;
+            window.open(`https://wa.me/5512996189098?text=${whatsappMessage}`, '_blank');
+            
+            document.getElementById('crmForm').reset();
+            alert('Cadastro realizado com sucesso! Entrarei em contato em breve.');
+        });
+
+        // Funções administrativas
+        function openCRM() {
+            if (leads.length === 0) {
+                alert('Nenhum lead cadastrado ainda.');
+                return;
+            }
+            
+            let leadsText = 'LEADS CADASTRADOS:\n\n';
+            leads.forEach(lead => {
+                leadsText += `Nome: ${lead.name}\nEmail: ${lead.email}\nTelefone: ${lead.phone}\nCidade: ${lead.city}\nInteresse: ${lead.interest}\nOrçamento: ${lead.budget}\nData: ${lead.date}\nStatus: ${lead.status}\n\n---\n\n`;
+            });
+            
+            alert(leadsText);
+        }
+
+        function openPropertyManager() {
+            let propertiesText = 'IMÓVEIS CADASTRADOS:\n\n';
+            properties.forEach(property => {
+                propertiesText += `Título: ${property.title}\nPreço: R$ ${property.price}\nCidade: ${property.city}\nEndereço: ${property.address}\nQuartos: ${property.bedrooms}\nBanheiros: ${property.bathrooms}\nVagas: ${property.parking}\n\n---\n\n`;
+            });
+            
+            alert(propertiesText);
+        }
+
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fechar menu mobile após clique
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+
+        // Inicializar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProperties();
+        });
+    </script>
+</body>
+</html>
